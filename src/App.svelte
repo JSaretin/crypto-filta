@@ -11,7 +11,6 @@
 
   setContext("audio", audio);
 
-
   let hash = "btc";
 
   let transactionFilter = {
@@ -35,19 +34,20 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-              <label for="coin">Select coin</label>
-              <select class="form-control" id="coin" bind:value={hash}>
-                <option value="btc">Bitcoin</option>
-                <option value="eth">Ethereum</option>
-                <option value="bch">Bitcoin Cash</option>
-              </select>
+            <label for="coin">Select coin</label>
+            <div class="row">
+              <div class="col-md-6">
+                <select class="form-control" id="coin" bind:value={hash}>
+                  <option value="btc">Bitcoin</option>
+                  <option value="eth">Ethereum</option>
+                  <option value="bch">Bitcoin Cash</option>
+                </select>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
 
     <div class="col-md-12">
       <div class="row">
