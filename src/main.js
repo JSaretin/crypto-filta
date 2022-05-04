@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 import App from "./App.svelte";
 
-const supportedCoins = ["eth", "btc", "ltc"];
+const supportedCoins = ["eth", "btc", "bch"];
 
 const transactions = writable(
   supportedCoins.reduce((acc, coin) => {
