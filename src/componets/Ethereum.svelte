@@ -22,10 +22,15 @@
           amount >= transactionFilter.amount.min &&
           amount <= transactionFilter.amount.max;
         if (isQualified) {
-          if (transactionFilter.notify) {
-            audio.play();
+          const qualified = transactionFilter.withData
+            ? true
+            : !transaction.data;
+          if (qualified) {
+            if (transactionFilter.notify) {
+              audio.play();
+            }
+            return true;
           }
-          return true;
         }
       }
     })

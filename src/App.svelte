@@ -22,6 +22,7 @@
     },
     sent: true,
     notify: false,
+    withData: false,
   };
 </script>
 
@@ -94,6 +95,26 @@
                     class="form-control"
                     id="sent"
                     bind:checked={transactionFilter.sent}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {:else}
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="withData">Contract Transaction</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input
+                    type="checkbox"
+                    class="form-control"
+                    id="withData"
+                    bind:checked={transactionFilter.withData}
                   />
                 </div>
               </div>
